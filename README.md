@@ -19,6 +19,6 @@ It detects whether a parking slot is **occupied** or **available** and shows the
 2. Ultrasonic sensor emits sound waves at 40kHz.
 3. ECHO pin stays HIGH for the duration of the wave's round trip.
 4. ESP32 calculates the distance using:  Distance = (time * 0.034) / 2
-5. If distance < 50 cm → slot occupied (Red LED ON).  
-If distance >= 50 cm → slot free (Green LED ON).
+5. If distance < 150 cm → slot occupied (Red LED ON).  
+If distance >= 150 cm → slot free (Green LED ON).
 
