@@ -1,6 +1,6 @@
 # Smart_Parking_System_ESP32
 
-This project is a simple **Smart Parking System** simulation built using **ESP32** and **Ultrasonic Sensors** in [Wokwi](https://wokwi.com).  
+This project is a simple **Smart Parking System** simulation built using **ESP32** and **Ultrasonic Sensors** in [Wokwi](https://wokwi.com/projects/443415059472220161).  
 It detects whether a parking slot is **occupied** or **available** and shows the status using LEDs.
 
 ## 🚗 Features
