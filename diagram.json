@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "author": "FATHIMA SANA C",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-hc-sr04",
+      "id": "ultrasonic1",
+      "top": -27.3,
+      "left": 226.3,
+      "attrs": { "distance": "50" }
+    },
+    { "type": "wokwi-led", "id": "led1", "top": 15.6, "left": 407, "attrs": { "color": "red" } },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": 15.6,
+      "left": 474.2,
+      "attrs": { "color": "green" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "esp:5", "ultrasonic1:TRIG", "green", [ "h206.44", "v-19.2" ] ],
+    [ "esp:18", "ultrasonic1:ECHO", "green", [ "h216.04", "v-9.6" ] ],
+    [ "esp:5V", "ultrasonic1:VCC", "red", [ "h-33.41", "v48", "h316.8", "v0", "h9.6" ] ],
+    [ "ultrasonic1:GND", "esp:GND.3", "black", [ "v0" ] ],
+    [ "esp:4", "led1:A", "green", [ "h340.84", "v-19.2" ] ],
+    [ "esp:GND.3", "led1:C", "black", [ "h321.64", "v-9.6" ] ],
+    [ "esp:GND.3", "led2:C", "black", [ "h0" ] ],
+    [ "esp:2", "led2:A", "green", [ "h408.04", "v-28.8" ] ]
+  ],
+  "dependencies": {}
+}
